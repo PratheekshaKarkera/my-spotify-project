@@ -2,6 +2,9 @@
   "name": "my-spotify-project",
   "version": "0.1.0",
   "homepage": "https://PratheekshaKarkera.github.io/my-spotify-project/",
+  "engines":{
+    "node":"18.x"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
