@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="spotify-app">
-      {/* Safety check: only render if data exists */}
+      {/* If data exists, show Header. If not, hide it (no crash) */}
       {playlistData && <PlaylistHeader playlist={playlistData} />}
       <div className="content-area">
         {playlistData?.tracks && (
