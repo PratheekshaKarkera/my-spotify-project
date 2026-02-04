@@ -6,7 +6,7 @@ import TrackList from './components/TrackList';
 
 function App() {
   const [selectedId, setSelectedId] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 800);
