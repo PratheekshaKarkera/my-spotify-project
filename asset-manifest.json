@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/my-spotify-project/static/css/main.5a59e240.css",
+    "main.js": "/my-spotify-project/static/js/main.8c9458fd.js",
+    "static/js/453.77f8f1fb.chunk.js": "/my-spotify-project/static/js/453.77f8f1fb.chunk.js",
+    "index.html": "/my-spotify-project/index.html",
+    "main.5a59e240.css.map": "/my-spotify-project/static/css/main.5a59e240.css.map",
+    "main.8c9458fd.js.map": "/my-spotify-project/static/js/main.8c9458fd.js.map",
+    "453.77f8f1fb.chunk.js.map": "/my-spotify-project/static/js/453.77f8f1fb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a59e240.css",
+    "static/js/main.8c9458fd.js"
+  ]
+}
