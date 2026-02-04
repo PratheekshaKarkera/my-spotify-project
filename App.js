@@ -6,6 +6,7 @@ import TrackList from './components/TrackList';
 
 function App() {
   const [selectedId, setSelectedId] = useState(null);
+  // 1. Changed to false so it doesn't get stuck on a blank loading screen
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -13,19 +14,22 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  if (isLoading) return <div className="loading-screen"><h1>Loading...</h1></div>;
-
+  // 2. The return statement now uses safe checks (playlistData &&)
   return (
     <div className="spotify-app">
-      <PlaylistHeader playlist={playlistData} />
+      {playlistData && <PlaylistHeader playlist={playlistData} />}
       <div className="content-area">
-        <TrackList 
-          tracks={playlistData.tracks} 
-          selectedId={selectedId} 
-          onSelect={setSelectedId} 
-        />
+        {playlistData?.tracks && (
+          <TrackList 
+            tracks={playlistData.tracks} 
+            selectedId={selectedId} 
+            onSelect={setSelectedId} 
+          />
+        )}
       </div>
     </div>
   );
 }
+
 export default App;
+
