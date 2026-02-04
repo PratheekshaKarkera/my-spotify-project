@@ -1,7 +1,7 @@
 {
   "name": "my-spotify-project",
   "version": "0.1.0",
-  "homepage": "https://PratheekshaKarkera.github.io/my-spotify-project/",
+  "homepage": ".",
   "engines":{
     "node":"18.x"
   },
