@@ -1,18 +1,16 @@
-{
-  "name": "my-spotify-project",
-  "version": "0.1.0",
-  "homepage": "https://PratheekshaKarkera.github.io/my-spotify-project/",
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "gh-pages": "^6.0.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  }
-}
+// Inside your App component
+const [token, setToken] = useState(null);
+
+// 1. Logic to grab token from URL after login
+useEffect(() => {
+    const hash = window.location.hash;
+    let token = window.localStorage.getItem("token");
+
+    if (!token && hash) {
+        token = hash.substring(1).split("&").find(elem => elem.startsWith("access_token")).split("=")[1];
+        window.location.hash = "";
+        window.localStorage.setItem("token", token);
+    }
+    setToken(token);
+}, []);
 
