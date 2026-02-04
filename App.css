@@ -1,0 +1,64 @@
+:root {
+  --bg-base: #121212;
+  --bg-gradient: #333333;
+  --text-dim: #b3b3b3;
+}
+
+body { margin: 0; background-color: var(--bg-base); font-family: sans-serif; }
+
+.spotify-app {
+  background: linear-gradient(to bottom, var(--bg-gradient) 0%, var(--bg-base) 400px);
+  min-height: 100vh;
+  color: white;
+  padding: 32px;
+}
+
+/* Header Section */
+.playlist-header { display: flex; align-items: flex-end; gap: 24px; margin-bottom: 32px; }
+.main-cover { 
+  width: 232px; 
+  height: 232px; 
+  object-fit: cover; 
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5); 
+}
+h1 { font-size: 80px; margin: 8px 0; font-weight: 900; letter-spacing: -3px; }
+
+/* Sticky Header Logic */
+.sticky-head { 
+  position: sticky; 
+  top: 0; 
+  background-color: #121212; 
+  z-index: 100;
+  padding: 12px 16px;
+  display: grid;
+  grid-template-columns: 48px 4fr 3fr 100px;
+  color: var(--text-dim);
+  font-size: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Track Row Grid */
+.track-row {
+  display: grid;
+  grid-template-columns: 48px 4fr 3fr 100px;
+  padding: 8px 16px;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.track-row:hover { background: rgba(255,255,255,0.1); }
+.track-row.active { background: rgba(255,255,255,0.3); }
+
+.cell-main { display: flex; gap: 12px; align-items: center; }
+.row-art { width: 40px; height: 40px; object-fit: cover; }
+.track-artist, .col-album, .col-time, .col-idx { color: var(--text-dim); font-size: 14px; }
+.track-title { font-weight: 500; font-size: 16px; color: white; }
+
+/* Mobile View */
+@media (max-width: 900px) {
+  .playlist-header { flex-direction: column; align-items: center; text-align: center; }
+  h1 { font-size: 40px; letter-spacing: -1px; }
+  .sticky-head, .track-row { grid-template-columns: 48px 1fr 80px; }
+  .col-album { display: none; }
+}

@@ -1,0 +1,9 @@
+body {
+  background-color: #121212; /* dark Spotify background */
+  color: #fff; /* white text */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.playlist-header div p {
+  color: #b3b3b3; /* gray text for description */
+}
