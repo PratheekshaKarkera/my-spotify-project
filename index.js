@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+// 1. Make sure you have a file named 'index.css' in the same folder
+import './index.css'; 
+// 2. Make sure you have a file named 'App.js' or 'App.jsx' in the same folder
+import App from './App'; 
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
