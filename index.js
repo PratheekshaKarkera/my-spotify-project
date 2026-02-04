@@ -1,7 +1,17 @@
-// This is plain JavaScript, no React required
-const root = document.getElementById('root');
-root.innerHTML = `
-  <div style="background: #1DB954; color: white; height: 100vh; display: flex; align-items: center; justify-content: center; font-family: sans-serif;">
-    <h1>Spotify Project is Connected!</h1>
-  </div>
-`;
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
