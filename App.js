@@ -1,27 +1,18 @@
-import React, { useState } from 'react';
-import './App.css';
-import playlistData from './data';
-import PlaylistHeader from './components/PlaylistHeader';
-import TrackList from './components/TrackList';
-
-function App() {
-  const [selectedId, setSelectedId] = useState(null);
-
-  return (
-    <div className="spotify-app">
-      {/* If data exists, show Header. If not, hide it (no crash) */}
-      {playlistData && <PlaylistHeader playlist={playlistData} />}
-      <div className="content-area">
-        {playlistData?.tracks && (
-          <TrackList 
-            tracks={playlistData.tracks} 
-            selectedId={selectedId} 
-            onSelect={setSelectedId} 
-          />
-        )}
-      </div>
-    </div>
-  );
+{
+  "name": "my-spotify-project",
+  "version": "0.1.0",
+  "homepage": "https://PratheekshaKarkera.github.io/my-spotify-project/",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "gh-pages": "^6.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
 }
 
-export default App;
